@@ -1,1 +1,1 @@
-My name is Adwoa. I am in the Computer Science Department.
+My name is Adwoa. I am in the Computer Science Department. I'm from the Eastern region.
