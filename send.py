@@ -14,7 +14,7 @@ Connected = False  # global variable for the state of the connection
 
 client = mqtt.Client()
 client.on_connect = on_connect
-client.connect("127.0.0.1", 1883, 60)
+client.connect("mqtt.eclipseprojects.io", 1883, 60)
 client.loop_start()  # start the loop
 
 while Connected != True:  # Wait for connection
@@ -23,8 +23,11 @@ while Connected != True:  # Wait for connection
 try:
     while True:
         message = input('Your message: ')
-        client.publish("glblcd/sam", message)
-        client.publish("codex/p",2*(' '+ message))
+        #client.publish("glblcd/lightbulb", message)
+        # client.publish("codex/p",2*(' '+ message))
+        # client.publish("glblcd/pokua", message)
+        # client.publish("glblcd/register", message)
+        client.publish("glblcd/brown", message)
 
 except KeyboardInterrupt:
     client.disconnect()
